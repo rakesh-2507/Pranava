@@ -20,35 +20,55 @@
                             <div class="logos"> <!-- Left section with logo -->
                                 <div class="logo"> <img src="pranava.jpg" alt="Logo" width="15%" class="me-2"> </div>
                                 <!-- Right section with logo -->
-                                <div class="logo"> <img src="greenwich.jpg" alt="Partner Logo" width="22%"> </div>
+                                <div class="logo"> <img src="logo.jpg" alt="Partner Logo" width="22%"> </div>
                             </div>
                         </div>
+                        <div id="errorAlert" class="alert alert-danger d-none"></div>
                         <form id="inquiryForm"> <!-- Property Inquiry Details -->
                             <div class="section-card mb-5">
                                 <div class="section-header mb-4"> <i class="fas fa-file-alt text-success me-2"></i>
                                     <h5 class="d-inline">Property Inquiry Details</h5>
                                 </div>
                                 <div class="row g-3">
-                                    <div class="col-md-6"> <label class="form-label text-muted"> <i
-                                                class="fas fa-user me-1"></i> Name </label> <input type="text"
-                                            class="form-control" name="name" placeholder="Enter Full Name" required>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted">
+                                            <i class="fas fa-user me-1"></i> Name <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="name"
+                                            placeholder="Enter Full Name" required>
                                     </div>
-                                    <div class="col-md-6"> <label class="form-label text-muted"> <i
-                                                class="fas fa-briefcase me-1"></i> Occupation </label> <input
-                                            type="text" class="form-control" placeholder="Enter occupation"> </div>
-                                    <div class="col-md-6"> <label class="form-label text-muted"> <i
-                                                class="fas fa-building me-1"></i> Company </label> <input type="text"
-                                            class="form-control" placeholder="Company name"> </div>
-                                    <div class="col-md-6"> <label class="form-label text-muted"> <i
-                                                class="fas fa-envelope me-1"></i> Email </label> <input type="email"
-                                            class="form-control" name="email" placeholder="name@email.com"> </div>
-                                    <div class="col-md-6"> <label class="form-label text-muted"> <i
-                                                class="fas fa-phone me-1"></i> Contact Number </label> <input type="tel"
-                                            class="form-control" name="contact"
-                                            placeholder="Enter 10-digit mobile number" required> </div>
-                                    <div class="col-md-6"> <label class="form-label text-muted"> <i
-                                                class="fas fa-map-marker-alt me-1"></i> Address </label> <input
-                                            type="text" class="form-control" placeholder="Street, City, ZIP"> </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted"> <i class="fas fa-briefcase me-1"></i>
+                                            Occupation </label>
+                                        <input type="text" class="form-control" name="occupation" placeholder="Enter occupation">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted"> <i class="fas fa-building me-1"></i>
+                                            Company </label>
+                                       <input type="text" class="form-control" name="company" placeholder="Company name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted"> <i class="fas fa-envelope me-1"></i> Email
+                                        </label>
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="name@email.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted">
+                                            <i class="fas fa-phone me-1"></i> Contact Number <span
+                                                class="text-danger">*</span>
+                                        </label>
+                                        <input type="tel" class="form-control" name="contact"
+                                            placeholder="Enter 10-digit mobile number" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted">
+                                            <i class="fas fa-map-marker-alt me-1"></i> Address <span
+                                                class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="address"
+                                            placeholder="Street, City, ZIP" required>
+                                    </div>
                                 </div>
                             </div> <!-- Property Preferences -->
                             <div class="section-card mb-5">
@@ -66,7 +86,9 @@
                                     </div>
                                 </div>
                                 <div class="row g-3">
-                                    <div class="col-md-6"> <label class="form-label text-muted">Minimum Price</label>
+                                    <div class="col-md-6"> <label class="form-label text-muted">
+                                            Minimum Price <span class="text-danger">*</span>
+                                        </label>
                                         <input type="text" class="form-control" name="min_price" placeholder="₹500,000">
                                     </div>
                                     <div class="col-md-6"> <label class="form-label text-muted">Maximum Price</label>

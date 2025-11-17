@@ -31,6 +31,13 @@ if (!$name || !$mobile) {
     exit;
 }
 
+if (!$min_price) {
+    write_log("Error: Missing min_price");
+    echo json_encode(["success" => false, "error" => "Minimum price required"]);
+    exit;
+}
+
+
 // ONLY DIGITS
 $mobile = preg_replace('/\D/', '', $mobile); // remove non-digits
 
