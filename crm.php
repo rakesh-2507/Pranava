@@ -32,7 +32,24 @@ if (!$name || !$mobile) {
 }
 
 // ONLY DIGITS
-$mobile = preg_replace('/\D/', '', $mobile);
+$mobile = preg_replace('/\D/', '', $mobile); // remove non-digits
+
+// if user entered 10 digits, add 91 automatically
+if (strlen($mobile) == 10) {
+    $mobile = "91" . $mobile;
+}
+
+// if user entered 12 digits and already starts with 91, keep as is
+if (strlen($mobile) == 12 && substr($mobile, 0, 2) == "91") {
+    // do nothing
+}
+
+// invalid length
+if (strlen($mobile) < 10) {
+    write_log("Error: Invalid mobile number format");
+    echo json_encode(["success" => false, "error" => "Invalid mobile number"]);
+    exit;
+}
 
 write_log("Received Request: " . json_encode($data));
 
